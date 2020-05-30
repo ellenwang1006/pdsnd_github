@@ -48,7 +48,7 @@ def get_filters():
     print('-'*40)
     return city, month, day
 
-
+#load_data function combine the dict and the dataset together
 def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
@@ -191,7 +191,7 @@ def  display_raw_data(df):
         next = next + 5
         print(df.iloc[next:next+5])
 
-
+# remember add main function to test the code
 def main():
     while True:
         city, month, day = get_filters()
