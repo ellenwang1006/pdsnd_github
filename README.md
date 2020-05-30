@@ -13,10 +13,13 @@ I wrote code to import the data and answer interesting questions about it by com
 I also wrote a script that takes in raw input to
  create an interactive experience in the terminal to present these statistics.
 
+ This project will return statistic metrics analytics basing on the city you choose.
+
 ### Files used
 chicago.csv
 new_your_city.csv
 Washington.csv
+
 
 ### Credits
 Thanks to Udacity courses which help me build the solutions.
