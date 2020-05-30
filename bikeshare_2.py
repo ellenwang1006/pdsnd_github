@@ -1,11 +1,12 @@
+#Import packages
 import time
 import pandas as pd
 import numpy as np
-
+#Put city and dataset as dictionary
 CITY_DATA = { 'Chicago': 'chicago.csv',
               'New York City': 'new_york_city.csv',
               'Washington': 'washington.csv' }
-
+# Define filter to ask user choose city,month, weekdays
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -26,6 +27,7 @@ def get_filters():
             break
     # get user input for month (all, january, february, ... , june)
     while True:
+    # remember to add.title() for Input
         month= input("\nWhich month would you like to filter by?\nJanuary, February, March, April, May, June or type 'all' if you do not have any preference?\n").title()
         if month not in ('January', 'February', 'March', 'April', 'May', 'June', 'all'):
             print("Sorry, I didn't catch that. Try again.")
@@ -46,7 +48,7 @@ def get_filters():
     print('-'*40)
     return city, month, day
 
-
+#load_data function combine the dict and the dataset together
 def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
@@ -189,7 +191,7 @@ def  display_raw_data(df):
         next = next + 5
         print(df.iloc[next:next+5])
 
-
+# remember add main function to test the code
 def main():
     while True:
         city, month, day = get_filters()
