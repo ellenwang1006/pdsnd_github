@@ -2,11 +2,11 @@
 import time
 import pandas as pd
 import numpy as np
-#Put city and dataset as dictionary 
+#Put city and dataset as dictionary
 CITY_DATA = { 'Chicago': 'chicago.csv',
               'New York City': 'new_york_city.csv',
               'Washington': 'washington.csv' }
-
+# Define filter to ask user choose city,month, weekdays
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -27,6 +27,7 @@ def get_filters():
             break
     # get user input for month (all, january, february, ... , june)
     while True:
+    # remember to add.title() for Input
         month= input("\nWhich month would you like to filter by?\nJanuary, February, March, April, May, June or type 'all' if you do not have any preference?\n").title()
         if month not in ('January', 'February', 'March', 'April', 'May', 'June', 'all'):
             print("Sorry, I didn't catch that. Try again.")
